@@ -1,4 +1,4 @@
-import { type ChangeEvent, useState } from "react";
+import { type ChangeEvent } from "react";
 import { useSettings } from "./hooks/useSettings";
 
 const sidebarStyle = (isOpen: boolean) => ({
