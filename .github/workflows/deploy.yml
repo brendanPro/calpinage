@@ -3,15 +3,17 @@ name: Deploy to GitHub Pages
 on:
   push:
     branches:
-      - main
+      - master  # Déclenchement sur push vers master
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   build-and-deploy:
-    permissions:
-      contents: read
-      id-token: write
-      pages: write
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
